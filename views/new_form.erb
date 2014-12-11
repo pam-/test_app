@@ -1,0 +1,14 @@
+<% unless !@errors || @errors.empty %>
+ <% @errors.each do |error| %>
+   <li><%= error %></li>
+ <% end %>
+<% end %>
+
+<form action="/new" method="post">
+  <label>Title</label>
+  <input type="text" name="title" placeholder="Climb every mountain">
+  <label>Description </label>
+  <textarea name="desc"></textarea>
+  <input type="checkbox" value="checked" name="is_done" %>
+  <input type="submit">
+</form>
